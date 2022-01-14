@@ -215,12 +215,14 @@ console.log(artists[0].name);
 
 console.log("the artist at index 2 is Diego Rivera");
 console.log(artists[2].name);
+
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 (no function needed) 
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Fix this issue and console.log() to check your work. */
 artists[8].name = "Vincent Van Gogh";
 console.log(artists[8].name);
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀  
+
 Use getArtistByIndex to do the following:
 1. Receive an array
 2. Receive a number, which is the desired index in the array.
@@ -242,19 +244,20 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
 function get20s(array) {
-  const twenties = [];
+  const lives = [];
   for (let i = 0; i < array.length; i++) {
     if (
       artists[i].years.split("-") < "2000" &&
-      artists[i].years.split("-") > "1990"
+      artists[i].years.split("-") > "1900"
     ) {
-      twenties.push(array[i].name);
+      lives.push(artists[i].name);
     }
   }
-  return twenties;
+  return lives;
 }
 
 console.log(get20s(artists));
+
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use removeArtist to do the following:
 1. Receive an array
